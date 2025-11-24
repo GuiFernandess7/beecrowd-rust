@@ -1,6 +1,8 @@
 ## Beecrowd Challenges in Rust 
 
-<img width="500" height="500" alt="rust-beecrowd" src="https://github.com/user-attachments/assets/85ebe9a9-c7e3-46db-b051-f2c32fbe6d96" />
+<p align="center">
+  <img width="500" height="395" alt="rust-beecrowd" src="https://github.com/user-attachments/assets/0e08bc03-f8af-4d5e-80c6-adcbd179e718" />
+</p>
 
 Each folder represents a problema. To view the problema access: 
 
