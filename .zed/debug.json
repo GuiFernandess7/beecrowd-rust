@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Rust Debug",
+    "type": "node-terminal",
+    "request": "launch",
+    "program": "target/debug/main",
+    "args": [],
+    "cwd": "${workspaceFolder}",
+    "preLaunchTask": "cargo build"
+  }
+]
