@@ -1,44 +1,31 @@
 use std::io;
 
 fn main(){
-    let mut animals: Vec<String> = Vec::new();
+        let mut input_1 = String::new();
+        let mut input_2 = String::new();
+        let mut input_3 = String::new();
 
-    for i in 0..3 {
-        let mut input = String::new();
-        io::stdin().read_line(&mut input).expect("error reading variable");
-        animals.push(input.trim().to_string());
-    }
+        io::stdin().read_line(&mut input_1).unwrap();
+        io::stdin().read_line(&mut input_2).unwrap();
+        io::stdin().read_line(&mut input_3).unwrap();
 
-    let specie = animals[1].to_string();
-    let style = animals[2].to_string();
-    let mut animal = "";
-    
-    if style == "carnivoro" {
-        animal = "aguia";
-    } 
-    
-    if style == "hematofago" && specie != "inseto"{
-        animal = "sanguessuga";
-    } else if style == "hematofago" && specie == "inseto" {
-        animal = "pulga";
-    }
-    
-    if style == "herbivoro" && specie != "mamifero" {
-        animal = "vaca";
-    } else if style == "herbivoro" && specie == "mamifero" {
-        animal = "lagarta";
-    }
-    
-    if style == "onivoro" {
-        if specie == "ave" {
-            animal = "pomba";
-        } else if specie == "mamifero" {
-            animal = "homem";
-        } else if specie == "anelideo" {
-            animal = "minhoca";
-        }
-    }
-    
-    
-    println!("{}", animal);
+        let cat1 = input_1.trim();
+        let cat2 = input_2.trim();
+        let cat3 = input_3.trim();
+
+        let animal = if cat1 == "vertebrado" {
+            if cat2 == "ave" {
+                if cat3 == "carnivoro" { "aguia" } else { "pomba" }
+            } else {
+                if cat3 == "onivoro" { "homem" } else { "vaca" }
+            }
+        } else {
+            if cat2 == "inseto" {
+                if cat3 == "hematofago" { "pulga" } else { "lagarta" }
+            } else {
+                if cat3 == "hematofago" { "sanguessuga" } else { "minhoca" }
+            }
+        };
+
+        println!("{}", animal);
 }
