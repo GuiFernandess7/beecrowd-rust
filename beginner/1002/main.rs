@@ -11,3 +11,4 @@ fn main() {
     let a: f64 = N * num_r.powi(2);
     println!("A={:.4}", a);
 }
+
